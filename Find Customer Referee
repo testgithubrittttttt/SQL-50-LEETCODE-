@@ -1,2 +1,15 @@
 # Write your MySQL query statement below
 select name from customer where referee_id is null or referee_id!=2
+
+EXPLANATION = 
+This SQL query is designed to retrieve the names of customers who are not referred by the customer with id = 2. Let's break down the query step by step:
+
+ 1.SELECT name: This part of the query specifies that we want to select the names of customers.
+
+ 2.FROM customer: Here, we indicate that we are selecting data from the table named "customer".
+
+ 3. WHERE referee_id IS NULL OR referee_id != 2: This is the condition we're using to filter the rows from the "customer" table. There are two parts to this condition:
+      - referee_id IS NULL: This checks if the referee_id is null. A null referee_id indicates that the customer was not referred by anyone. So, we want to include these customers in our result.
+      - OR: This is a logical operator that specifies that either condition must be true for a row to be included in the result.
+
+referee_id != 2: This part of the condition checks if the referee_id is not equal to 2. This means we want to exclude customers who were referred by the customer with id = 2.
