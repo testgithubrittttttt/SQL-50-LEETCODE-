@@ -3,3 +3,11 @@
 select distinct author_id as id from Views
 where author_id = viewer_id 
 order by id;
+
+EXPLANATION = 
+
+- SELECT DISTINCT author_id AS id FROM Views: This part of the query selects distinct author_id values from the Views table and aliases it as id. The DISTINCT keyword ensures that unique author_id values are returned, eliminating duplicate entries.
+
+- WHERE author_id = viewer_id: This condition filters the rows where the author_id equals the viewer_id. This means that the viewer and the author are the same person, indicating that the author has viewed the article.
+
+- ORDER BY id: This clause orders the result set by the id (an alias for author_id), arranging the author IDs in ascending order.
