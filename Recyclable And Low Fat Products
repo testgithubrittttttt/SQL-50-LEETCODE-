@@ -1,3 +1,11 @@
 # Write your MySQL query statement below
 select product_id from Products
 where low_fats='Y' and recyclable='Y';
+
+Explanation:
+
+- SELECT product_id: This part of the query specifies what data we want to retrieve from the database. In this case, we want to fetch the product_id column.
+
+- FROM Products: Here, we specify the table from which we want to retrieve the data, which is the Products table.
+
+- WHERE low_fats='Y' AND recyclable='Y': This is the conditional part of the query. It filters the rows in the Products table based on certain criteria. Specifically, it selects rows where the value of the low_fats column is 'Y' (indicating the product is low fat) and the value of the recyclable column is also 'Y' (indicating the product is recyclable). The AND operator ensures that both conditions must be true for a row to be included in the result set.
