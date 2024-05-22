@@ -1,0 +1,19 @@
+select teacher_id,COUNT(distinct subject_id) as cnt
+from teacher
+group by teacher_id
+
+EXPLANATION = Breakdown of the Query
+1. SELECT Clause:
+   - teacher_id: This column is included in the SELECT clause because we need to group the results by each teacher.
+   - COUNT(DISTINCT subject_id) AS cnt: This part of the query counts the number of unique subjects (subject_id) each teacher teaches. The DISTINCT keyword ensures that only unique subjects are counted for each teacher. The result is aliased as cnt to represent the count of unique subjects.
+
+2. FROM Clause:
+   - teacher: This specifies the table from which the data is being selected.
+
+3. GROUP BY Clause:
+   - teacher_id: This groups the results by teacher_id, meaning the query will aggregate data for each teacher separately. For each unique teacher_id, the query counts the distinct subject_id values.
+
+Explanation of the Logic = 
+- Grouping: The GROUP BY teacher_id clause groups the data by each teacher. This means all rows with the same teacher_id are considered as a single group.
+- Counting Distinct Subjects: Within each group (each teacher), COUNT(DISTINCT subject_id) counts the number of distinct subjects taught by that teacher. Using DISTINCT ensures that if a teacher teaches the same subject in different departments, it is only counted once per teacher.
+- Result: The query returns a result set where each row represents a teacher and the number of unique subjects they teach.
