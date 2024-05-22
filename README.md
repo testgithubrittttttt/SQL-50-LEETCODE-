@@ -15,7 +15,7 @@ We encourage you to contribute to the growth of this repository! Here's how:
 
 License:
 
-This repository is licensed under the MIT License.
+This repository is licensed under the MIT License. See the LICENSE file for more details
 
 Star This Repository:
 
@@ -23,4 +23,10 @@ If you find these challenges valuable, consider starring this repository to show
 
 Stay Connected:
 
-Follow me (your GitHub username) for more SQL-related content, tips, and tricks!
+If you have any questions or suggestions, feel free to connect with me at:
+
+LinkedIn = https://www.linkedin.com/in/dhruv-sharma-b79191249/
+Twitter = https://x.com/dhruvsharma4054
+Github = https://github.com/testgithubrittttttt
+
+Happy querying! 🌟
