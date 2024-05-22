@@ -1,0 +1,28 @@
+SELECT activity_date AS day, COUNT(DISTINCT user_id) AS active_users
+FROM Activity
+WHERE (activity_date > "2019-06-27" AND activity_date <= "2019-07-27")
+GROUP BY activity_date;
+
+Explanation = Query Breakdown:
+
+- SELECT activity_date AS day:
+  - This part of the query selects the activity_date column from the Activity table and renames it to day for the output.
+
+- COUNT(DISTINCT user_id) AS active_users:
+  - This counts the number of unique user_id values for each activity_date. The DISTINCT keyword ensures that each user is counted only once per day, even if they performed multiple activities.
+
+- FROM Activity:
+  - Specifies the Activity table as the source of the data.
+
+- WHERE (activity_date > "2019-06-27" AND activity_date <= "2019-07-27"):
+  - This condition filters the rows to include only those activities that occurred within the 30-day period from June 28, 2019, to July 27, 2019. The activity_date > "2019-06-27" condition ensures that activities from June 28, 2019, onwards are included, and activity_date <= "2019-07-27" includes activities up to and including July 27, 2019.
+
+- GROUP BY activity_date:
+  - This clause groups the results by the activity_date, so the COUNT(DISTINCT user_id) is calculated separately for each day.
+
+- Result:
+  - The query returns a table with two columns:
+    - day: the date of the activity.
+    - active_users: the count of distinct users who performed any activity on that day.
+
+The results will include each day within the specified 30-day period and the corresponding number of unique active users for each day.
